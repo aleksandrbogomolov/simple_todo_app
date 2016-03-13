@@ -6,7 +6,7 @@
 </header>
 <main>
     <div>
-        <input><button title="Add"></button>
+        <input type="text"><button type="button" title="Add"></button>
     </div>
 </main>
 <footer>
