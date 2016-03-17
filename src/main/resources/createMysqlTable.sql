@@ -1,0 +1,5 @@
+CREATE TABLE notDoneToDo (
+  id INT NOT NULL AUTO_INCREMENT,
+  values VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
+);

@@ -1,4 +1,5 @@
 <html>
+<meta charset="utf-8">
 <title>Simple TODO app</title>
 <body>
 <header>
@@ -6,8 +7,14 @@
 </header>
 <main>
     <div>
-        <input type="text"><button type="button" title="Add"></button>
+        <input type="text">
+        <button type="button" title="Add"></button>
     </div>
+    <ol>
+        <li>Выучить HTML/CSS</li>
+        <li>Закончить разметку страницы</li>
+        <li>Подключить CSS</li>
+    </ol>
 </main>
 <footer>
 
