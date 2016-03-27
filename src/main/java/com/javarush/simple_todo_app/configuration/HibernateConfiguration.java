@@ -46,13 +46,13 @@ public class HibernateConfiguration {
     }
 
     @Bean
-    public LocalSessionFactoryBean sessionFactoryBean() {
+    public LocalSessionFactoryBean sessionFactory() {
 
-        LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
-        sessionFactoryBean.setDataSource(dataSource());
-        sessionFactoryBean.setPackagesToScan(new String[]{"com.javarush.simple_todo_app.model"});
-        sessionFactoryBean.setHibernateProperties(hibernateProperties());
-        return sessionFactoryBean;
+        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+        sessionFactory.setDataSource(dataSource());
+        sessionFactory.setPackagesToScan(new String[]{"com.javarush.simple_todo_app.model"});
+        sessionFactory.setHibernateProperties(hibernateProperties());
+        return sessionFactory;
     }
 
     @Bean
