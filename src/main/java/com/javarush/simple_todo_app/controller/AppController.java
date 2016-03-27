@@ -28,7 +28,7 @@ public class AppController {
         return "index";
     }
 
-    @RequestMapping(value = {"/"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/new"}, method = RequestMethod.POST)
     public String saveToDo(@Valid ToDo toDo, BindingResult result, ModelMap modelMap) {
 
         if (result.hasErrors()) return "new";

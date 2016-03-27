@@ -35,7 +35,6 @@ public class HibernateConfiguration {
         return dataSource;
     }
 
-    @Bean
     private Properties hibernateProperties() {
 
         Properties properties = new Properties();

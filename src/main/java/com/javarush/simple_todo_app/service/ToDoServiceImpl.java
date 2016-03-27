@@ -26,7 +26,7 @@ public class ToDoServiceImpl implements ToDoService {
     public void updateToDo(ToDo toDo) {
         ToDo upToDo = toDoDao.findToDoById(toDo.getId());
         if (upToDo != null) {
-            upToDo.setValues(toDo.getValues());
+            upToDo.setValue(toDo.getValue());
         }
     }
 
