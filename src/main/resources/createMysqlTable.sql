@@ -4,6 +4,6 @@ CREATE TABLE toDoList (
 );
 
 INSERT INTO toDoList (value) VALUES
-  ('Create ToDoApp'),
   ('Learn more about Spring'),
+  ('Create ToDoApp'),
   ('Push project on GitHub');
