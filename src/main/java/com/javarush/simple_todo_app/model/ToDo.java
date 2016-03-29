@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 public class ToDo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Size(min = 1, max = 100)

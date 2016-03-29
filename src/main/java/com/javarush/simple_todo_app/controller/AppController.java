@@ -28,13 +28,21 @@ public class AppController {
         return "index";
     }
 
+    @RequestMapping(value = {"/new"}, method = RequestMethod.GET)
+    public String newToDo(ModelMap modelMap) {
+
+        ToDo toDo = new ToDo();
+        modelMap.addAttribute("ToDo", toDo);
+        return "new";
+    }
+
     @RequestMapping(value = {"/new"}, method = RequestMethod.POST)
     public String saveToDo(@Valid ToDo toDo, BindingResult result, ModelMap modelMap) {
 
         if (result.hasErrors()) return "new";
         toDoService.saveToDo(toDo);
         modelMap.addAttribute("ToDo", toDo);
-        return "index";
+        return "redirect:/";
     }
 
     @RequestMapping(value = {"/edit-{id}-ToDo"}, method = RequestMethod.GET)
@@ -51,13 +59,13 @@ public class AppController {
         if (result.hasErrors()) return "new";
         toDoService.updateToDo(toDo);
         modelMap.addAttribute("ToDo", toDo);
-        return "index";
+        return "redirect:/";
     }
 
     @RequestMapping(value = {"/delete-{id}-ToDo"}, method = RequestMethod.GET)
     public String deleteToDo(ToDo toDo) {
 
         toDoService.deleteToDo(toDo);
-        return "index";
+        return "redirect:/";
     }
 }

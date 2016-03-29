@@ -13,12 +13,10 @@
     <a href="<c:url value='/new' />">Add new ToDo</a>
     <table>
         <tr>
-            <td>id</td>
             <td>value</td>
         </tr>
         <c:forEach items="${list}" var="toDo">
             <tr>
-                <td>${toDo.id}</td>
                 <td>${toDo.value}</td>
                 <td><a href="<c:url value='/edit-${toDo.id}-ToDo' />">Edit</a> </td>
                 <td><a href="<c:url value='/delete-${toDo.id}-ToDo' />">Delete</a> </td>
