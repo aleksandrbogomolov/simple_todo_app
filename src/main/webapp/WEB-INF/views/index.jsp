@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Simple TODO app</title>
 <style>
-    h1 {
+    .title {
         text-align: center;
     }
     .value {
