@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <title>Simple TODO app</title>
 <style>
+    body {
+        font-family: sans-serif;
+    }
     .title {
         text-align: center;
     }
     .value {
         font-size: large;
+    }
+    .cap {
+        color: gray;
     }
 </style>
 <body>
@@ -20,12 +26,25 @@
         <h2>List of ToDo</h2>
         <a href="<c:url value='/new' />">Add new ToDo</a>
         <table>
-            <tr>
+            <tr class="cap">
+                <td>Value</td>
+                <td>Done</td>
             </tr>
             <c:forEach items="${list}" var="toDo">
                 <tr>
                     <td class="value">${toDo.value}</td>
+                    <td>
+                        <c:choose>
+                            <c:when test="${toDo.done == true}">
+                                <input type="checkbox" name="done" disabled checked/>
+                            </c:when>
+                            <c:otherwise>
+                                <input type="checkbox" name="done" disabled/>
+                            </c:otherwise>
+                        </c:choose>
+                    </td>
                     <td><a href="<c:url value='/edit-${toDo.id}-ToDo' />">Edit</a></td>
+                    <td><a href="<c:url value='/done-${toDo.id}-ToDo' />">Done</a></td>
                     <td><a href="<c:url value='/delete-${toDo.id}-ToDo' />">Delete</a></td>
                 </tr>
             </c:forEach>

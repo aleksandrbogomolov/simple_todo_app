@@ -54,18 +54,28 @@ public class AppController {
     }
 
     @RequestMapping(value = {"/edit-{id}-ToDo"}, method = RequestMethod.POST)
-    public String updateToDo(@Valid ToDo toDo, BindingResult result, ModelMap modelMap) {
+    public String updateToDo(@PathVariable int id, BindingResult result, ModelMap modelMap) {
 
         if (result.hasErrors()) return "new";
-        toDoService.updateToDo(toDo);
+        toDoService.updateToDo(toDoService.findById(id));
+        modelMap.addAttribute("ToDo", toDoService.findById(id));
+        return "redirect:/";
+    }
+
+    @RequestMapping(value = {"/done-{id}-ToDo"}, method = RequestMethod.GET)
+    public String setDone(@PathVariable int id, ModelMap modelMap) {
+
+        ToDo toDo = toDoService.findById(id);
+        toDo.setDone(true);
+        toDoService.setDone(toDo);
         modelMap.addAttribute("ToDo", toDo);
         return "redirect:/";
     }
 
     @RequestMapping(value = {"/delete-{id}-ToDo"}, method = RequestMethod.GET)
-    public String deleteToDo(ToDo toDo) {
+    public String deleteToDo(@PathVariable int id) {
 
-        toDoService.deleteToDo(toDo);
+        toDoService.deleteToDo(toDoService.findById(id));
         return "redirect:/";
     }
 }

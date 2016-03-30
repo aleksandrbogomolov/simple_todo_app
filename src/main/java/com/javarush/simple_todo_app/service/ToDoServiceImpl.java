@@ -30,6 +30,13 @@ public class ToDoServiceImpl implements ToDoService {
         }
     }
 
+    public void setDone(ToDo toDo) {
+        ToDo upToDo = toDoDao.findToDoById(toDo.getId());
+        if (upToDo != null) {
+            upToDo.setDone(toDo.getDone());
+        }
+    }
+
     public void deleteToDo(ToDo toDo) {
         toDoDao.deleteToDoById(toDo);
     }

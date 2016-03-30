@@ -5,6 +5,12 @@
 <head>
     <meta charset="utf-8">
     <title>Create ToDo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: large;
+        }
+    </style>
 </head>
 <body>
 <main>

@@ -15,6 +15,9 @@ public class ToDo {
     @Column(name = "VALUE", nullable = false)
     private String value;
 
+    @Column(name = "DONE", insertable = false)
+    private Boolean isDone;
+
     public int getId() {
         return id;
     }
@@ -29,6 +32,14 @@ public class ToDo {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public Boolean getDone() {
+        return isDone;
+    }
+
+    public void setDone(Boolean done) {
+        isDone = done;
     }
 
     @Override
