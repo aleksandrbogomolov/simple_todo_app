@@ -78,4 +78,20 @@ public class AppController {
         toDoService.deleteToDo(toDoService.findById(id));
         return "redirect:/";
     }
+
+    @RequestMapping(value = {"/done"}, method = RequestMethod.GET)
+    public String showDoneToDo(ModelMap modelMap) {
+
+        List<ToDo> list = toDoService.showDoneToDo();
+        modelMap.addAttribute("list", list);
+        return "index";
+    }
+
+    @RequestMapping(value = {"/notDone"}, method = RequestMethod.GET)
+    public String showNotDoneToDo(ModelMap modelMap) {
+
+        List<ToDo> list = toDoService.showNotDoneToDo();
+        modelMap.addAttribute("list", list);
+        return "index";
+    }
 }

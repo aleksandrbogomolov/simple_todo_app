@@ -44,4 +44,12 @@ public class ToDoServiceImpl implements ToDoService {
     public List<ToDo> findAllToDo() {
         return toDoDao.findAllToDo();
     }
+
+    public List<ToDo> showDoneToDo() {
+        return toDoDao.showDoneToDo();
+    }
+
+    public List<ToDo> showNotDoneToDo() {
+        return toDoDao.showNotDoneToDo();
+    }
 }

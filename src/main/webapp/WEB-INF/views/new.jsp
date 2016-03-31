@@ -8,11 +8,16 @@
     <style>
         body {
             font-family: sans-serif;
-            font-size: large;
+        }
+        .title {
+            text-align: center;
         }
     </style>
 </head>
 <body>
+<header>
+    <h1 class="title">Simple TODO app</h1>
+</header>
 <main>
     <div align="center">
         <h2>Create new ToDo</h2>

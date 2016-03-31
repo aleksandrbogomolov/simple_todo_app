@@ -24,7 +24,10 @@
 <main>
     <div align="center">
         <h2>List of ToDo</h2>
-        <a href="<c:url value='/new' />">Add new ToDo</a>
+        <a href="<c:url value='/new'/>">Add new ToDo</a>
+        <a href="<c:url value='/'/>">Show all</a>
+        <a href="<c:url value='/done'/>">Show done</a>
+        <a href="<c:url value='/notDone'/>">Show not done</a>
         <table>
             <tr class="cap">
                 <td>Value</td>
