@@ -1,33 +1,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
-<meta charset="utf-8">
-<title>Simple TODO app</title>
-<style>
-    body {
-        font-family: sans-serif;
-    }
-    .title {
-        text-align: center;
-    }
-    .value {
-        font-size: large;
-    }
-    .cap {
-        color: gray;
-    }
-</style>
+<head>
+    <meta charset="utf-8">
+    <title>Simple TODO app</title>
+    <link rel="stylesheet" type="text/css" href="<c:url value="../../css/style.css"/>"/>
+</head>
 <body>
-<header>
-    <h1 class="title">Simple TODO app</h1>
-</header>
 <main>
+    <h1 class="title">Simple TODO app</h1>
     <div align="center">
         <h2>List of ToDo</h2>
-        <a href="<c:url value='/new'/>">Add new ToDo</a>
-        <a href="<c:url value='/'/>">Show all</a>
-        <a href="<c:url value='/done'/>">Show done</a>
-        <a href="<c:url value='/notDone'/>">Show not done</a>
+        <nav>
+            <ul>
+                <li><a href="<c:url value='/new' />">Add new ToDo</a></li>
+                <li><a href="<c:url value='/' />">Show all</a></li>
+                <li><a href="<c:url value='/done' />">Show done</a></li>
+                <li><a href="<c:url value='/notDone' />">Show not done</a></li>
+            </ul>
+        </nav>
         <table>
             <tr class="cap">
                 <td>Value</td>
@@ -55,7 +46,7 @@
     </div>
 </main>
 <footer>
-
+    &copy; 2016, Aleksandr Bogomolov
 </footer>
 </body>
 </html>

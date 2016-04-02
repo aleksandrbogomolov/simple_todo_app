@@ -12,7 +12,13 @@ public interface ToDoService {
 
     void updateToDo(ToDo toDo);
 
+    void setDone(ToDo toDo);
+
     void deleteToDo(ToDo toDo);
 
     List<ToDo> findAllToDo();
+
+    List<ToDo> showDoneToDo();
+
+    List<ToDo> showNotDoneToDo();
 }

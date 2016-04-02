@@ -13,4 +13,8 @@ public interface ToDoDao {
     void deleteToDoById(ToDo toDo);
 
     List<ToDo> findAllToDo();
+
+    List<ToDo> showDoneToDo();
+
+    List<ToDo> showNotDoneToDo();
 }

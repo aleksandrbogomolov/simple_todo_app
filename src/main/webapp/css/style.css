@@ -1,0 +1,55 @@
+body {
+    background-color: #efe5d0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0;
+    color: #512828;
+}
+
+.title {
+    text-align: center;
+}
+
+table {
+    font-size: large;
+    text-align: left;
+}
+
+.cap {
+    color: #6e6e6e;
+}
+
+footer {
+    position: fixed;
+    left: 40%;
+    bottom: 0;
+    text-align: center;
+    padding: 15px;
+    margin: 0 10px 10px 10px;
+    font-size: 90%;
+}
+
+a:link {
+    text-decoration: none;
+    color: #492424;
+}
+
+nav {
+    margin: 10px 10px 0 10px;
+    background-color: #efe5d0;
+}
+
+nav ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 5px 0;
+}
+
+nav ul li {
+    display: inline;
+    padding: 5px 10px;
+}
+
+nav ul li a:link, nav ul li a:visited {
+    color: #492424;
+    font-weight: bold;
+}
