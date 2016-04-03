@@ -10,7 +10,7 @@
 <body>
 <div class="container">
     <h1 class="text-center">Create new ToDo</h1>
-    <div>
+    <form class="form-inline">
         <form:form method="post" modelAttribute="ToDo">
             <form:input path="id" id="id" type="hidden"/>
             <table>
@@ -24,7 +24,7 @@
         <form action="/">
             <input type="submit" value="Back">
         </form>
-    </div>
+    </form>
 </div>
 <div class="panel panel-default navbar-fixed-bottom">
     <div class="panel-footer">
