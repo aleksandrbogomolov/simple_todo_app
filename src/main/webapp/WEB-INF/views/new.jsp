@@ -28,6 +28,7 @@
                     <form:form method="post" modelAttribute="ToDo">
                         <form:input path="id" id="id" type="hidden"/>
                         <div class="form-group">
+                            <label for="value"></label>
                             <form:input path="value" id="value" cssClass="form-control"/>
                             <input type="submit" value="Add" class="btn btn-default">
                         </div>
