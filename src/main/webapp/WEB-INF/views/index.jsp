@@ -53,7 +53,7 @@
     <div class="panel panel-default navbar-fixed-bottom">
         <div class="panel-footer">
             <p class="text-center">
-                <small>&copy; 2016, Aleksandr Bogomolov</small>
+                <small>&copy; 2016, <a href="mailto:ksandr_ua@mail.ru">Aleksandr Bogomolov</a></small>
             </p>
         </div>
     </div>

@@ -24,23 +24,19 @@
     <div class="container">
         <div class="row">
             <div class="span6 center">
-                <form class="form-inline">
-                    <form:form method="post" modelAttribute="ToDo">
-                        <form:input path="id" id="id" type="hidden"/>
-                        <div class="form-group">
-                            <label for="value"></label>
-                            <form:input path="value" id="value" cssClass="form-control"/>
-                            <input type="submit" value="Add" class="btn btn-default">
-                        </div>
-                    </form:form>
-                </form>
+                <form:form method="post" modelAttribute="ToDo" cssClass="form-inline">
+                    <form:input path="id" id="id" type="hidden"/>
+                    <label for="value"></label>
+                    <form:input path="value" id="value" cssClass="form-control"/>
+                    <input type="submit" value="Add" class="btn btn-default">
+                </form:form>
             </div>
         </div>
     </div>
     <div class="panel panel-default navbar-fixed-bottom">
         <div class="panel-footer">
             <p class="text-center">
-                <small>&copy; 2016, Aleksandr Bogomolov</small>
+                <small>&copy; 2016, <a href="mailto:ksandr_ua@mail.ru">Aleksandr Bogomolov</a></small>
             </p>
         </div>
     </div>
