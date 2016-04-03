@@ -5,7 +5,8 @@
 <head>
     <meta charset="utf-8">
     <title>Create ToDo</title>
-    <link rel="stylesheet" type="text/css" href="<c:url value="../../css/bootstrap.min.css"/>"/>
+    <link rel="stylesheet" type="text/css" href="<c:url value="/webjars/bootstrap/3.3.6/css/bootstrap.min.css"/>"/>
+    <link rel="stylesheet" type="text/css" href="<c:url value="../../css/style.css"/>"/>
 </head>
 <body>
 <div class="container">

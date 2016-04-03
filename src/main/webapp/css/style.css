@@ -1,0 +1,21 @@
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.center form {
+    display: inline-block;
+}
