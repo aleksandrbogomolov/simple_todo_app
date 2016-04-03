@@ -54,11 +54,11 @@ public class AppController {
     }
 
     @RequestMapping(value = {"/edit-{id}-ToDo"}, method = RequestMethod.POST)
-    public String updateToDo(@PathVariable int id, BindingResult result, ModelMap modelMap) {
+    public String updateToDo(@PathVariable int id, ModelMap modelMap) {
 
-        if (result.hasErrors()) return "new";
-        toDoService.updateToDo(toDoService.findById(id));
-        modelMap.addAttribute("ToDo", toDoService.findById(id));
+        ToDo toDo = toDoService.findById(id);
+        toDoService.updateToDo(toDo);
+        modelMap.addAttribute("ToDo", toDo);
         return "redirect:/";
     }
 
