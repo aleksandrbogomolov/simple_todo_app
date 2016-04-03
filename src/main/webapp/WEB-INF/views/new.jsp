@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <title>Create ToDo</title>
@@ -10,27 +10,38 @@
 <body>
 <div class="container">
     <h1 class="text-center">Create new ToDo</h1>
-    <form class="form-inline">
-        <form:form method="post" modelAttribute="ToDo">
-            <form:input path="id" id="id" type="hidden"/>
-            <table>
-                <tr>
-                    <td><label for="value">Value: </label></td>
-                    <td><form:input path="value" id="value"/></td>
-                    <td><input type="submit" value="Add"></td>
-                </tr>
-            </table>
-        </form:form>
-        <form action="/">
-            <input type="submit" value="Back">
-        </form>
-    </form>
-</div>
-<div class="panel panel-default navbar-fixed-bottom">
-    <div class="panel-footer">
-        <p class="text-center">
-            <small>&copy; 2016, Aleksandr Bogomolov</small>
-        </p>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="<c:url value='/' />">Show all</a></li>
+                    <li><a href="<c:url value='/done' />">Show done</a></li>
+                    <li><a href="<c:url value='/notDone' />">Show not done</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="span6 center">
+                <form class="form-inline">
+                    <form:form method="post" modelAttribute="ToDo">
+                        <form:input path="id" id="id" type="hidden"/>
+                        <div class="form-group">
+                            <form:input path="value" id="value" cssClass="form-control"/>
+                            <input type="submit" value="Add" class="btn btn-default">
+                        </div>
+                    </form:form>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default navbar-fixed-bottom">
+        <div class="panel-footer">
+            <p class="text-center">
+                <small>&copy; 2016, Aleksandr Bogomolov</small>
+            </p>
+        </div>
     </div>
 </div>
 </body>

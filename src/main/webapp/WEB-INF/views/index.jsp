@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <title>Simple TODO app</title>
@@ -22,14 +22,14 @@
         </div>
     </nav>
     <table class="table table-striped">
-        <tr class="cap">
+        <tr>
             <th>Value</th>
             <th>Done</th>
             <th>Settings</th>
         </tr>
         <c:forEach items="${list}" var="toDo">
             <tr>
-                <td class="value">${toDo.value}</td>
+                <td class="">${toDo.value}</td>
                 <td>
                     <c:choose>
                         <c:when test="${toDo.done == true}">
